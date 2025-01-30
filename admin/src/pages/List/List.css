@@ -1,0 +1,124 @@
+.list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.p1 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.listtableformat {
+    width: 100%;
+    max-width: 1200px;
+    padding: 12px 15px;
+    border: 1px solid #e0e0e0;
+    font-size: 14px;
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr 2fr 1fr;
+    align-items: center;
+    gap: 10px;
+    background-color: #fff;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover Effect */
+.listtableformat.row:hover {
+    background-color: #f1f1f1;
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
+}
+
+.listtableformat.title {
+    background-color: #ececec;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #555;
+    border: none;
+    display: grid;
+    grid-template-columns: 2fr 3fr 2fr 2fr 1fr;
+}
+
+.listtableformat img {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cursor {
+    color: #ff4d4f;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+/* Hover Effect for Delete */
+.cursor:hover {
+    color: #d32f2f;
+    transform: scale(1.2);
+}
+
+/* Mobile and Small Screen Responsive */
+@media (max-width: 768px) {
+    .listtableformat {
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 8px;
+    }
+
+    .listtableformat.title {
+        grid-template-columns: 1fr 2fr 1fr;
+    }
+
+    .listtableformat img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .cursor {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .list {
+        padding: 10px;
+    }
+
+    .p1 {
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .listtableformat {
+        grid-template-columns: 1fr 3fr;
+    }
+
+    .listtableformat.title {
+        display: none; /* Hide title row for very small screens */
+    }
+
+    .listtableformat img {
+        width: 35px;
+        height: 35px;
+    }
+
+    .cursor {
+        font-size: 12px;
+    }
+}
